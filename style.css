@@ -1,0 +1,250 @@
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #e0e0e0;
+}
+
+.container {
+    max-width: 450px;
+    margin: 0 auto;
+    background: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+/* 2. Hero & Header */
+.hero-section {
+    position: relative;
+    height: 75vh;
+    background-image: url('images/hero.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: 1;
+}
+
+.header, .hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.main-logo {
+    width: 80px;
+    height: auto;
+}
+
+.social-header {
+    margin-top: 15px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 5px;
+}
+
+.social-img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.brand-name {
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+    display: block;
+}
+
+/* 3. Typography & Hero Content */
+.hero-content {
+    margin-top: auto;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.1rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.admission-text {
+    font-size: 2.4rem;
+    font-weight: 800;
+    margin-bottom: 25px;
+    line-height: 1.1;
+}
+
+/* 4. Form Styles */
+.subscribe-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.subscribe-form input {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.subscribe-form button {
+    background: white;
+    color: #444;
+    border: none;
+    padding: 10px 35px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+/* 5. Info Section & Contact Button */
+.info-section {
+    padding: 40px 25px;
+    text-align: center;
+    background-color: white;
+    flex-grow: 1;
+}
+
+.info-section p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 400;
+}
+
+.contact-btn {
+    display: inline-block;
+    background: black;
+    color: white;
+    text-decoration: none;
+    padding: 12px 35px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-top: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+/* 6. Contact List (Modern Monochrome Style) */
+
+
+.phone-list {
+    margin-top: 30px;
+    padding: 0 10px;
+    animation: slideUp 0.4s ease-out;
+    text-align: left;
+}
+
+.contact-title {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.contact-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.contact-row:last-child {
+    border-bottom: none;
+}
+
+.phone-display {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #000;
+}
+
+.icon-group {
+    display: flex;
+    gap: 10px;
+}
+
+.icon-btn {
+    width: 36px;
+    height: 36px;
+    background-color: #fff; /* Clean White Background */
+    border: 1px solid #000; /* Black Border for visibility */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.icon-btn i {
+    color: #000; /* Black Icon */
+    font-size: 0.9rem;
+}
+
+/* Hover effect: Swaps colors for a professional feel */
+.icon-btn:hover {
+    background-color: #000;
+    transform: scale(1.1);
+}
+
+.icon-btn:hover i {
+    color: #fff;
+}
+.icon-btn.location:hover {
+    background-color: #ea4335; /* Optional: Google Maps Red on hover */
+    border-color: #ea4335;
+}
+
+.icon-btn.location:hover i {
+    color: #fff;
+}
+
+/* --- 7. Animations & Responsiveness --- */
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 100%;
+        box-shadow: none;
+    }
+}
+
